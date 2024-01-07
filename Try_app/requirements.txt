@@ -1,0 +1,7 @@
+numpy
+librosa
+joblib
+scikit-learn
+torch
+matplotlib
+resampy
