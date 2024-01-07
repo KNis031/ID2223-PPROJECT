@@ -1,0 +1,5 @@
+**/.DS_store
+.ipynb_checkpoints
+__pycache__/
+*.zip
+/Taining_local/logs/*
