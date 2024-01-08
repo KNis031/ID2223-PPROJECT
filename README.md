@@ -17,7 +17,8 @@ There are at least three common ways to do audio tagging. First is the “old-sc
 #### Dataset and features
 As mentioned, the model is trained with the [dataset used in COALA](https://zenodo.org/records/3887261), a dataset of 189896 mel-spectrograms computed over <10 second audio clips from [freesound.org](https://freesound.org/). The dataset is uploaded in a training and validation split. For the project, I ended up splitting it further into training, validation and testing sets. Of the 170793 entries in the original 'training' set, 70% were used for training and the remaining 30% were used for validation. The set referenced as 'validation' in the dataset description consisting of 19103 entries, I used for testing. The mel-spectrograms are computed from all clips with a duration of less than 10 seconds, with the shorter clips being padded with noise to 10 seconds. Sounds are resampled to 22 kHz. The spectrograms are computed with 96 mel-bins, a window size of 1024 samples, a hopsize of 512 samples, and a Hamming windowing function. Finally, a patch of size 96x96 with the highest energy is collected from each mel-spectrogram, the patch is batch-normalized and is used as features input to the model. This last step is motivated by that events in the highest energy frame are assumed to contain most discriminitive power. For targets, the dataset uses multi-hot encoded tags from a vocabulary of 1000 user entered tags. This vocabulary was created by removing stopwords, making plural forms of nouns to singular, removing less informative words, and taking the remaining 1000 tags of the sounds of freesound.org [1].
 
-![alt text](http://url/to/img.png)
+![alt text]([http://url/to/img.png](https://github.com/KNis031/ID2223-PPROJECT/blob/main/melspec.png))
+
 *a mel-spectrogram*
 
 #### Architecture
@@ -26,7 +27,8 @@ With model architecture, I took inspiration from a number of papers, including o
 #### Training
 Initially, it was planned to train the model for 101 epochs. However, after inspecting the loss curves after half the training time (51 epochs), it seemed as the model had reached the best validation performance after just 11 epochs. Therefore no more training was done, and the best model was kept. The model was trained with google Colab for ~7 hours, utilizing a T4 GPU.
 
-![alt text](http://url/to/img.png)
+![alt text]([http://url/to/img.png](https://github.com/KNis031/ID2223-PPROJECT/blob/main/trainingloss.png))
+
 *loss curves: blue - validation, red - training*
 
 ### Testing
