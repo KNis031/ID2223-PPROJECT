@@ -92,10 +92,14 @@ The repo is structured into six directories, such that each of them could run in
     * __utils.py__ - a number of functions used in other places of the program
 
 To run the training and testing pipeline I recommend the notebook /Training_colab/Training.ipynb
+
 To run inference on a single datapoint I recommend having a look at the functions and the bottom of /Utils/utils.py
 
 ### References
 [1] Favory, X. et al. (2020) Coala: Co-aligned autoencoders for learning semantically enriched audio representations, arXiv.org. Available at: https://arxiv.org/abs/2006.08386
+
 [2] Tzanetakis, G. and Cook, P. (2002) musical genre classification of audio signals. IEEE Transactions on Speech and audio processing, 10, 293-302. - references - scientific research publishing. Available at: https://www.scirp.org/(S(351jmbntvnsjt1aadkozje))/reference/referencespapers.aspx?referenceid=2069610
+
 [3] Jesse Davis and Mark Goadrich. The relationship between precision-recall and roc curves. In Proceedings of the 23rd International Conference on Machine Learning, ICML ’06, page 233–240, New York, NY, USA, 2006. Association for Computing Machinery
+
 [4] Choi, K., Fazekas, G. and Sandler, M. (2016) Automatic tagging using deep convolutional neural networks, arXiv.org. Available at: https://arxiv.org/abs/1606.00298
