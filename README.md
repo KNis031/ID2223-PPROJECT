@@ -9,9 +9,12 @@ Tags: Music information retrival, Hopsworks, modal, Hugging Face spaces, freesou
 
 ### Background
 In the general audio tagging classification problem, an audio clip can be given one or multiple tags by a (machine learning) classifier. Considering the multi-label case, we have a feature-vector *x* and a corresponding tag-vector *y*. We then aim to find a function *f* that maps the features to a prediction vector y<sub>pred</sub>:
+
 f (x) = y<sub>pred</sub>
+
 such that y<sub>pred</sub> is similar to y given some metric.
-There are at least three common ways to do audio tagging. First is the “old-school” way, where pre-computed features such MFCCs are used together with non-deep models such as k-nearest neighbors [2]. This approach has fallen out of fashion, and is generally outperformed by deep approaches. Of these there exists two, either computing mel-spectrograms and using these as input, or using the waveform directly as input. Both of these approaches generally use CNNs, but the CNN architectures varies to some extent between and within the two approaches. Considering the mel-spectrogram approach, common architectures employ 3 to 6 convolutional layers followed by 1 to 3 fully connected layers. Still, different takes on kernel size. pooling stratergy etc. exists. Other approaches include replacing the fully connected layers with recurrent neural networks (RNNs). These differences architecture are in part motivated architecture by the shape of the input spectrogram. One may for example input the mel-spectrogram for the full time-duration of the sound or only segment of it.
+
+There are at least three common ways to do audio tagging. First is the “old-school” way, where pre-computed features such MFCCs are used together with non-deep models such as k-nearest neighbors [2]. This approach has fallen out of fashion, and is generally outperformed by deep approaches. Of these there exists two, either computing mel-spectrograms and using these as input, or using the waveform directly as input. Both of these approaches generally use CNNs, but the CNN architectures varies to some extent between and within the two approaches. Considering the mel-spectrogram approach, common architectures employ 3 to 6 convolutional layers followed by 1 to 3 fully connected layers. Still, different takes on kernel size. pooling stratergy etc. exists. Other approaches include replacing the fully connected layers with recurrent neural networks (RNNs). These differences in architecture are in part motivated by the shape of the input spectrogram. One may for example input the mel-spectrogram of the full duration of the sound clip or, only a segment of it.
 
 ### Method
 #### Dataset and features
