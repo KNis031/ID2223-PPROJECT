@@ -50,7 +50,7 @@ A batch inference script were deployed on [modal](https://modal.com/). The scrip
 
 The monitoring app on [huggingface spaces](https://huggingface.co/spaces/karl-sim/FreesoundMonitor) downloads the spectrogram images, .ogg sound files and dictionary of previous predictions from hopsworks. The five most recent predictions can be listened to and you can see their predictions via the app interface.
 
-In the [Try-it app](https://huggingface.co/spaces/karl-sim/FreesoundTry), a user can upload their own <10 seconds sound and have it classified by the model. In it's current version this app is "stand alone", relying on a model + utils stored on huggingface, but I am planning to have this fixed (see next section).
+In the [Try-it app](https://huggingface.co/spaces/karl-sim/FreesoundTry), a user can upload their own <10 seconds sound and have it classified by the model. In it's current version this app is "stand alone", relying on a model + utils stored on huggingface, but I am planning to have this fixed by getting the model from hopsworks (see next section).
 
 ![grph](https://github.com/KNis031/ID2223-PPROJECT/blob/main/grph.png)
 
